@@ -113,15 +113,12 @@ function taskStatusValidation(params:text) {
   const values = Object.values(taskStatus);
   let status = []
   for (const value of values) {
-    console.log(value);
     status.push(value)
   }
 
   if (!status.includes(params)) {
-    console.log(false);
     return false
   }
-  console.log(true);
   return true;
 }
 

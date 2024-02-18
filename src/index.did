@@ -1,0 +1,8 @@
+service: () -> {
+    add: (text, text) -> (variant {Ok:record {id:text; title:text; body:text; createdAt:nat64; taskStatus:text}; Err:variant {InvalidInput:text}});
+    delete: (text) -> (variant {Ok:record {id:text; title:text; body:text; createdAt:nat64; taskStatus:text}; Err:variant {InvalidInput:text}});
+    get: () -> (variant {Ok:vec record {id:text; title:text; body:text; createdAt:nat64; taskStatus:text}; Err:variant {InvalidInput:text}}) query;
+    getTaskStatus: () -> (variant {Ok:record {done:text; none:text; progress:text}; Err:variant {InvalidInput:text}}) query;
+    setTaskStatus: (text, text) -> (variant {Ok:record {id:text; title:text; body:text; createdAt:nat64; taskStatus:text}; Err:variant {InvalidInput:text}});
+    update: (text, text, text) -> (variant {Ok:record {id:text; title:text; body:text; createdAt:nat64; taskStatus:text}; Err:variant {InvalidInput:text}});
+}

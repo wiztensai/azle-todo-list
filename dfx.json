@@ -1,0 +1,12 @@
+{
+  "canisters": {
+    "todo_list": {
+      "type": "custom",
+      "main": "src/index.ts",
+      "candid": "src/index.did",
+      "build": "npx azle todo_list",
+      "wasm": ".azle/todo_list/todo_list.wasm",
+      "gzip": true
+    }
+  }
+}
